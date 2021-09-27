@@ -1,7 +1,6 @@
 import random
 
 number = random.randint(1, 100)
-
 steps = 0
 warm = number + 5
 warm_second = number - 5
@@ -35,16 +34,13 @@ while True:
         print(f"Amount of steps: {steps}")
         break
 
-    elif answer==warm or answer==warm_second:
+    elif answer in range(warm_second, warm+1):
         print("WARM")
-    elif answer==cold or answer==cold_second:
+    elif answer in range(cold_second, cold+1):
         print("COLD")
-
     elif answer > number:
         print("Your number is higher, try again!")
         continue
-
-
     else:
         print("Your number is lower, try again!")
         continue
